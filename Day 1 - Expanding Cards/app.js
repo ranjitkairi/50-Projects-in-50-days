@@ -1,3 +1,5 @@
+// block element and variables
+
 const panels = document.querySelectorAll(".panel");
 
 panels.forEach((panel) => {
@@ -7,6 +9,8 @@ panels.forEach((panel) => {
   });
 });
 
+
+// Remove function
 function removeActiveClasses() {
   panels.forEach((panel) => {
     panel.classList.remove("active");

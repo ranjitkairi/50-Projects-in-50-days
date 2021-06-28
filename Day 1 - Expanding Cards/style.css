@@ -22,13 +22,6 @@ body {
   width: 90vw;
 }
 
-header h1 {
-  font-family: "Pattaya";
-  color: rgb(112, 53, 43);
-  border-bottom: 1px solid rgb(126, 92, 85);
-  text-align: center;
-}
-
 .panel {
   background-size: auto 100%;
   background-position: center;
