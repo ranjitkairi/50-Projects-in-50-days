@@ -6,7 +6,7 @@ const circles = document.querySelectorAll(".circle");
 
 let currentActive = 1;
 
-//    Next addEventListener....
+//    Next addEventListener update....
 next.addEventListener("click", () => {
   currentActive++;
 
@@ -16,8 +16,7 @@ next.addEventListener("click", () => {
   update();
 });
 
-
-//   Prev addEventListener....
+//   Prev addEventListener update....
 prev.addEventListener("click", () => {
   currentActive--;
 
@@ -26,7 +25,6 @@ prev.addEventListener("click", () => {
   }
   update();
 });
-
 
 //   Active and Remove Functions....
 function update() {
@@ -38,12 +36,10 @@ function update() {
     }
   });
 
-
   //   Next active....
   const actives = document.querySelectorAll(".active");
   progress.style.width =
     ((actives.length - 1) / (circles.length - 1)) * 100 + "%";
-    
 
   //     Prev and Next disaabled....
   if (currentActive === 1) {
