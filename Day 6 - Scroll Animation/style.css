@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Pattaya&display=swap");
+
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #efedd6;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Pattaya";
+  text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.6);
+  margin: 10px;
+  font-size: 2.3rem;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: steelblue;
+  color: #fff;
+  margin: 10px;
+  width: 300px;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.6);
+  transform: translateX(200%);
+  transition: transform 0.4s ease;
+}
+
+.box:hover {
+  color: rgb(228, 207, 207);
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-200%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
+
+.box h2 {
+  font-family: "Pattaya";
+  text-shadow: 2px 4px 5px rgba(0, 0, 0, 5);
+  font-size: 2.5rem;
+}
+
+/* box colo */
+
+.b1:hover {
+  background-color: #008cff;
+}
+.b2:hover {
+  background-color: #ff00b3;
+}
+.b3:hover {
+  background-color: #09ff00;
+}
+.b4:hover {
+  background-color: #ffe600;
+}
+.b5:hover {
+  background-color: #ff0000;
+}
+.b6:hover {
+  background-color: #1a632c;
+}
+.b7:hover {
+  background-color: #008cff85;
+}
+.b8:hover {
+  background-color: #8e58d4;
+}
+.b9:hover {
+  background-color: #7e2d2d;
+}
+.b10:hover {
+  background-color: #70490f;
+}
+.b11:hover {
+  background-color: #476d1b;
+}
+.b12:hover {
+  background-color: #ff00d4;
+}
+.b13:hover {
+  background-color: #6a97bb;
+}
+.b14:hover {
+  background-color: #3f103d;
+}
+.b15:hover {
+  background-color: #af7b0b60;
+}
+.b16:hover {
+  background-color: #40698a;
+}
+.b17:hover {
+  background-color: #869aaa;
+}
+.b18:hover {
+  background-color: #eeb61b;
+}
