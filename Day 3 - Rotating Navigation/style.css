@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Pattaya&display=swap");
+
+:root {
+  --background-color1: #333;
+  --background-color2: #fafafa;
+  --text-color1: #fff;
+  --text-color2: #222;
+  --text-color3: #555;
+  --text-color4: #333;
+  --circle-bg-color1: #ff7979;
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--background-color1);
+  color: var(--text-color2);
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.container {
+  background-color: var(--background-color2);
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  background-color: var(--circle-bg-color1);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 1.6rem;
+  color: var(--text-color1);
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  color: var(--text-color1);
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+.contant img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.contant {
+  max-width: 950px;
+  margin: 50px auto;
+}
+
+.contant h1 {
+  font-family: "Pattaya";
+  color: #128ed6;
+  margin: 0;
+}
+
+.contant h1 span {
+  color: #d67a12;
+  cursor: pointer;
+}
+
+.contant h3 {
+  font-family: "Pattaya";
+  color: #262727;
+}
+
+.contant small {
+  color: var(--text-color3);
+  font-style: italic;
+}
+
+.contant p {
+  color: var(--text-color4);
+  line-height: 1.5em;
+}
