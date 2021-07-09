@@ -2,8 +2,8 @@ const resultEl = document.getElementById("result");
 const lengthEl = document.getElementById("length");
 const uppercaseEl = document.getElementById("uppercase");
 const lowercaseEl = document.getElementById("lowercase");
-const numberEl = document.getElementById("numbers");
-const symbolEl = document.getElementById("symbols");
+const numbersEl = document.getElementById("numbers");
+const symbolsEl = document.getElementById("symbols");
 const generateEl = document.getElementById("generate");
 const clipboardEl = document.getElementById("clipboard");
 
@@ -34,8 +34,8 @@ generateEl.addEventListener("click", () => {
   const length = +lengthEl.value;
   const hasLower = lowercaseEl.checked;
   const hasUpper = uppercaseEl.checked;
-  const hasNumber = numberEl.checked;
-  const hasSymbol = symbolEl.checked;
+  const hasNumber = numbersEl.checked;
+  const hasSymbol = symbolsEl.checked;
 
   resultEl.innerText = generatePassword(
     hasLower,
@@ -48,7 +48,7 @@ generateEl.addEventListener("click", () => {
 
 function generatePassword(lower, upper, number, symbol, length) {
   let generatedPassword = "";
-  const typesCount = lower + upper + number + symbol + length;
+  const typesCount = lower + upper + number + symbol;
   const typesArr = [{ lower }, { upper }, { number }, { symbol }].filter(
     (item) => Object.values(item)[0]
   );
@@ -82,6 +82,6 @@ function getRandomNumber() {
 }
 
 function getRandomSymbol() {
-  const symbols = "!#{}()[]/.,=*@<>$%^&";
+  const symbols = "!@#$%^&*(){}[]=<>/,.";
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
