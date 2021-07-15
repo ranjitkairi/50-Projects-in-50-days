@@ -1,0 +1,68 @@
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rebeccapurple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 3rem;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h3 {
+  font-family: "Alata", sans-serif;
+  text-transform: uppercase;
+  color: gray;
+  font-size: 2rem;
+  letter-spacing: 20px;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  align-items: center;
+  text-align: center;
+  margin-top: 0;
+}
+
+.list-item {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  margin-top: 0;
+}
+
+li {
+  list-style-type: none;
+  margin: 0.2rem 0;
+}
+
+li a {
+  color: #fff;
+  font-size: 0.9rem;
+  text-decoration: none;
+  justify-content: flex-start;
+}
+
+li a:hover {
+  color: tomato;
+}
+
+footer {
+  background-color: rgb(119, 65, 173);
+  color: #f5f5f5;
+  padding: 1rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #f5f5f5;
+}
